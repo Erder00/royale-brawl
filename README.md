@@ -1,9 +1,11 @@
 # RoyaleBrawl
 Private brawl stars server with PvP Battles (v27.269)
 
-![Screenshot](https://github.com/chainsawy/RoyaleBrawl/blob/main/screenshots/ingame.jpg)
+# this server is made by xeondev and not by me! i'm just archiving it here bc other archives on github are broken or don't include the client. also maybe i'll do a few improvements if i feel like it. :)
 
-## [DOWNLOAD CLIENT](https://drive.google.com/file/d/1DAZRiVBqTwVrE9IivYz0DOroFcg3YFoq/view?usp=sharing)
+![Screenshot](https://github.com/Erder00/royale-brawl/blob/main/screenshots/ingame.jpg)
+
+## [DOWNLOAD CLIENT](https://mega.nz/file/HmozULYA#7eBOTQmPywD631oaexwHmN2YoycVD5ECXUeXzVDQvdE)
 
 ### Setup
 ##### Compiling
@@ -15,7 +17,7 @@ You need to setup mysql server and import `database.sql` file from this reposito
 - Set your ip in `config.json` -> `udp_host`
 - Set your mysql database name, password, and username in `config.json`
 ##### Client
-- Download apk here: [link](https://drive.google.com/file/d/1DAZRiVBqTwVrE9IivYz0DOroFcg3YFoq/view?usp=sharing)
+- Download apk here: [link](https://mega.nz/file/HmozULYA#7eBOTQmPywD631oaexwHmN2YoycVD5ECXUeXzVDQvdE)
 - Open this file: `lib/armeabi-v7a/libreversed.script.so` and put your ip address in `HostPatcher`
 - Compile apk and play enjoy playing this server.
 
