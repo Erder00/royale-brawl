@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1
--- Время создания: Июл 23 2022 г., 15:51
--- Версия сервера: 10.4.24-MariaDB
--- Версия PHP: 8.1.6
+-- Host: 127.0.0.1
+-- Creation time: Jul 23, 2022, 03:51 pm
+-- Server version: 10.4.24-MariaDB
+-- PHP version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `brawldatabase`
+-- Database: `brawldatabase`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `accounts`
+-- Table structure `accounts`
 --
 
 CREATE TABLE `accounts` (
@@ -36,7 +36,7 @@ CREATE TABLE `accounts` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `alliances`
+-- Table structure `alliances`
 --
 
 CREATE TABLE `alliances` (
@@ -47,17 +47,17 @@ CREATE TABLE `alliances` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Индексы сохранённых таблиц
+-- Saved table indexes
 --
 
 --
--- Индексы таблицы `accounts`
+-- Table indexes `accounts`
 --
 ALTER TABLE `accounts`
   ADD UNIQUE KEY `Id` (`Id`);
 
 --
--- Индексы таблицы `alliances`
+-- Table indexes `alliances`
 --
 ALTER TABLE `alliances`
   ADD UNIQUE KEY `Id` (`Id`);

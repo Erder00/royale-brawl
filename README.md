@@ -34,6 +34,7 @@ You need to setup mysql server and import `database.sql` file from this reposito
 - Leaderboards
 - Events refresh
 - slash commands in clubs
+- slash commands in terminal
 
 ### all availible club commands:
 - /help
