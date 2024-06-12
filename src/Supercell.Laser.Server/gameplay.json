@@ -1,0 +1,16 @@
+{
+  "slots": [
+    {
+      "slot": 1,
+      "game_modes": [ "BattleRoyale" ]
+    },
+    {
+      "slot": 2,
+      "game_modes": [ "CoinRush" ]
+    },
+    {
+      "slot": 3,
+      "game_modes": [ "BountyHunter" ]
+    }
+  ]
+}
