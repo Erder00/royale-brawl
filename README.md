@@ -33,3 +33,26 @@ You need to setup mysql server and import `database.sql` file from this reposito
 - Brawl Pass & Trophy Road
 - Leaderboards
 - Events refresh
+- slash commands in clubs
+
+### all availible club commands:
+- /help
+- /status
+
+### all availible console commands:
+- /unlockall [TAG]
+- /premium [TAG] (does nothing if u don't specify anything)
+- /unban [TAG]
+- /ban [TAG]
+- /changevalue [TAG] [NewName]
+- /settrophies [TAG] [ammount]
+- /addgems [TAG] [ammount]
+- /addcoins [TAG] [ammount]
+- /addtokens [TAG] [ammount]
+- /addstartokens [TAG] [ammount]
+- /removecoins [TAG] [ammount] (idk why it's here, u could just use a negative value with /addcoins)
+- /removegems [TAG] [ammount] (same here, no idea why it's there)
+- /removestartokens [TAG] [ammount] (yep, here too)
+- /givedev [TAG] (also doesn't do anything if u don't specify it, maybe i'll add club cmds that only devs can use or sum)
+- /changevalue [TAG] [FieldName]
+- /changevalue [TAG] [FieldName] [Value] (twice? wtf)
