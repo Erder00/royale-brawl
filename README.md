@@ -3,7 +3,7 @@ Private brawl stars server with PvP Battles (v27.269)
 
 # this server is made by xeondev and not by me! i'm just archiving it here bc other archives on github are broken or don't include the client. also maybe i'll do a few improvements if i feel like it. :)
 
-## [Full setup guide + showcase](https://www.youtube.com/watch?v=zDfj-73MKLc)
+## [Full setup guide + showcase](https://www.youtube.com/watch?v=zDfj-73MKLc) (video is blocked in Russia, use a vpn)
 
 ![Screenshot](https://github.com/Erder00/royale-brawl/blob/main/screenshots/ingame.jpg)
 
