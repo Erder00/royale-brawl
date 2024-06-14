@@ -3,5 +3,5 @@
   "udp_port": 9449,
   "database_username": "root",
   "database_password": "root",
-  "database_name":  "db"
+  "database_name": "db"
 }
