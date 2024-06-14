@@ -344,8 +344,8 @@ namespace Supercell.Laser.Logic.Home
 
             ByteStreamHelper.WriteDataReference(encoder, Character);
 
-            encoder.WriteString("DE"); // Z
-            encoder.WriteString("erder"); // V
+            encoder.WriteString("US"); // Z
+            encoder.WriteString("xeondev | modified by erder"); // V
 
             encoder.WriteVInt(2);
             {
