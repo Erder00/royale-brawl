@@ -34,7 +34,7 @@
             {
                 Accounts = Database.Accounts.GetRankingList();
                 Alliances = Database.Alliances.GetRankingList();
-                Thread.Sleep(20 * 1000);
+                Thread.Sleep(5 * 1000);
             }
         }
     }
