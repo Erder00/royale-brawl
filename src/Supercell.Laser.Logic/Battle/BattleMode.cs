@@ -166,7 +166,7 @@ namespace Supercell.Laser.Logic.Battle
                 message.TokensReward = tokensReward;
                 if (rank > 5)
                 {
-                    int trophiesReward = 500;
+                    int trophiesReward = 999999;
                     message.TrophiesReward = trophiesReward;
 
                     player.Avatar.AddTokens(tokensReward);
@@ -646,7 +646,7 @@ namespace Supercell.Laser.Logic.Battle
                         message.Result = 0;
                         message.TokensReward = 20;
 
-                        int trophiesReward = rand.Next(500) + 1;
+                        int trophiesReward = rand.Next(999999) + 1;
                         message.TrophiesReward = trophiesReward;
 
                         hero.AddTrophies(trophiesReward);
@@ -684,7 +684,7 @@ namespace Supercell.Laser.Logic.Battle
                     message.TokensReward = tokensReward;
                     if (rank > 5)
                     {
-                        int trophiesReward = (500);
+                        int trophiesReward = (999999);
                         message.TrophiesReward = trophiesReward;
 
                         player.Avatar.AddTokens(tokensReward);
@@ -693,7 +693,7 @@ namespace Supercell.Laser.Logic.Battle
                     }
                     else
                     {
-                        int trophiesReward = (500);
+                        int trophiesReward = (999999);
                         message.TrophiesReward = trophiesReward;
 
                         player.Avatar.AddTokens(tokensReward);

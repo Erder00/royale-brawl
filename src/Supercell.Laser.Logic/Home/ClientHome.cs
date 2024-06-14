@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 
 namespace Supercell.Laser.Logic.Home
 {
@@ -181,6 +181,7 @@ namespace Supercell.Laser.Logic.Home
             }
         }
 
+
         private void UpdateDailyOfferBundles()
         {
             OfferBundles.Add(GenerateDailyGift());
@@ -343,8 +344,8 @@ namespace Supercell.Laser.Logic.Home
 
             ByteStreamHelper.WriteDataReference(encoder, Character);
 
-            encoder.WriteString("RU"); // Z
-            encoder.WriteString("XeonDev"); // V
+            encoder.WriteString("DE"); // Z
+            encoder.WriteString("erder"); // V
 
             encoder.WriteVInt(2);
             {
@@ -498,3 +499,4 @@ namespace Supercell.Laser.Logic.Home
         }
     }
 }
+

@@ -774,7 +774,7 @@
 
                 AllianceStreamEntryMessage response = new AllianceStreamEntryMessage();
                 response.Entry = new AllianceStreamEntry();
-                response.Entry.AuthorName = "bot";
+                response.Entry.AuthorName = "crackeds hotte schwester";
                 response.Entry.AuthorId = 1;
                 response.Entry.Id = alliance.Stream.EntryIdCounter + 667 + BotIdCounter++;
                 response.Entry.AuthorRole = AllianceRole.Member;
@@ -789,11 +789,30 @@
                         response.Entry.Message = $"Server Status:\nServer Version: v{Program.SERVER_VERSION} (for v27.269) ({Program.BUILD_TYPE})\nPlayers Online: {Sessions.Count}\n" +
                             $"Cached accounts: {AccountCache.Count}\nCached alliances: {AllianceCache.Count}\nCached teams: {Teams.Count}\n" +
                             $"Your id: {accountId.GetHigherInt()}-{accountId.GetLowerInt()} ({LogicLongCodeGenerator.ToCode(accountId)})\n" +
-                            $"Memory Used: {megabytesUsed}MB\n";
+                            $"Memory Used: {megabytesUsed}MB\n" +
+                            $"crackeds schwester ist hot ngl";
                         Connection.Send(response);
                         break;
                     case "help":
-                        response.Entry.Message = $"List of commands:\n/help - shows this message\n/status - show server status"; // /usecode [code] - use bonus code
+                        response.Entry.Message = $"List of commands:\n/help - shows this message\n/status - show server status\n/böse-brawler - shows you every brawler that should be removed"; // /usecode [code] - use bonus code
+                        Connection.Send(response);
+                        break;
+                    case "devhelp":
+
+                            response.Entry.Message =
+                                $"All Dev Commands\n" +
+                                $"\n" +
+                                $"/unban [TAG]\n" +
+                                $"/ban [TAG]\n" +
+                                $" /addgems [TAG] [ammount]\n" +
+                                $" /addcoins [TAG] [ammount]\n" +
+                                $" /addtokens [TAG] [ammount]\n" +
+                                $" /addstartokens [TAG] [ammount]\n" +
+                                $" /removecoins [TAG] [ammount]\n" +
+                                $" /removegems [TAG] [ammount]\n" +
+                                $" /removestartokens [TAG] [ammount]\n" +
+                                $" /unlockall [TAG]\n" +
+                                $" /settrophies [TAG][ammount]\n";
                         Connection.Send(response);
                         break;
                     default:
