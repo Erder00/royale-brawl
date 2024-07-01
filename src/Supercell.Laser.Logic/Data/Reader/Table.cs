@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.VisualBasic.FileIO;
 
 namespace Supercell.Laser.Logic.Data.Reader
@@ -20,26 +20,62 @@ namespace Supercell.Laser.Logic.Data.Reader
             using (var reader = new TextFieldParser(path))
             {
                 reader.SetDelimiters(",");
+                reader.HasFieldsEnclosedInQuotes = true;
 
-                var columns = reader.ReadFields();
-
-                foreach (var column in columns)
+                if (!reader.EndOfData)
                 {
-                    _headers.Add(column);
-                    _columns.Add(new Column());
+                    var columns = reader.ReadFields();
+                    if (columns == null || columns.Length == 0)
+                    {
+                        throw new Exception("CSV file does not contain headers.");
+                    }
+
+                    foreach (var column in columns)
+                    {
+                        _headers.Add(column);
+                        _columns.Add(new Column());
+                    }
                 }
 
-                var types = reader.ReadFields();
+                if (!reader.EndOfData)
+                {
+                    var types = reader.ReadFields();
+                    if (types == null || types.Length != _headers.Count)
+                    {
+                        throw new Exception("CSV file does not contain valid types row.");
+                    }
 
-                foreach (var type in types) _types.Add(type);
+                    foreach (var type in types) _types.Add(type);
+                }
 
                 while (!reader.EndOfData)
                 {
                     var values = reader.ReadFields();
 
+                    if (values == null)
+                    {
+                        throw new Exception("CSV file contains a null row.");
+                    }
+                    if (values.Length < _headers.Count)
+                    {
+                        var extendedValues = new List<string>(values);
+                        while (extendedValues.Count < _headers.Count)
+                        {
+                            extendedValues.Add(string.Empty);
+                        }
+                        values = extendedValues.ToArray();
+                    }
+                    else if (values.Length > _headers.Count)
+                    {
+                        Array.Resize(ref values, _headers.Count);
+                    }
+
                     if (!string.IsNullOrEmpty(values[0])) AddRow(new Row(this));
 
-                    for (var i = 0; i < _headers.Count; i++) _columns[i].Add(values[i]);
+                    for (var i = 0; i < _headers.Count; i++)
+                    {
+                        _columns[i].Add(values[i]);
+                    }
                 }
             }
         }
