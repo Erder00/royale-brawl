@@ -5,6 +5,7 @@
     using Supercell.Laser.Logic.Friends;
     using Supercell.Laser.Logic.Helper;
     using Supercell.Laser.Logic.Home;
+    using Supercell.Laser.Logic.Data;
     using Supercell.Laser.Logic.Home.Structures;
     using Supercell.Laser.Titan.DataStream;
 
@@ -206,6 +207,13 @@
             StarTokens -= count;
             return true;
         }
+        public void GiveBrawlerByName(string name)
+        {
+            CharacterData character = DataTables.Get(16).GetData<CharacterData>(name);
+            CardData card = DataTables.Get(23).GetData<CardData>(character.Name + "_unlock");
+
+            this.UnlockHero(character.GetGlobalId(), card.GetGlobalId());
+        }
 
         public ClientAvatar()
         {
@@ -298,7 +306,7 @@
                     Stream.WriteVInt(hero.Trophies);
                 }
 
-                Stream.WriteVInt(Heroes.Count); 
+                Stream.WriteVInt(Heroes.Count);
                 foreach (Hero hero in Heroes)
                 {
                     ByteStreamHelper.WriteDataReference(Stream, hero.CharacterData);

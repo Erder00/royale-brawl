@@ -60,3 +60,4 @@ You need to setup mysql server and import `database.sql` file from this reposito
 - /givedev [TAG] (also doesn't do anything if u don't specify it, maybe i'll add club cmds that only devs can use or sum)
 - /changevalue [TAG] [FieldName]
 - /changevalue [TAG] [FieldName] [Value] (twice? wtf)
+- /givebrawler [tag] [brawler]

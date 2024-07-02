@@ -73,6 +73,9 @@
                         case "removestartokens":
                             ExecuteRemoveStarTokens(args);
                             break;
+                        case "givebrawler":
+                            GiveBrawlerByNam(args);
+                            break;
                         case "givedev":
                             ExecuteGiveDev(args);
                             break;
@@ -87,11 +90,33 @@
             }
         }
 
+        private static void GiveBrawlerByNam(string[] args)
+        {
+            if(args.Length != 3)
+            {
+                Console.WriteLine("Usage: /givebrawler [TAG] [BRAWLER]");
+                return;
+            }
+            long id = LogicLongCodeGenerator.ToId(args[1]);
+            Account account = Accounts.Load(id);
+            account.Avatar.GiveBrawlerByName(args[2]);
+            if (Sessions.IsSessionActive(id))
+            {
+                var session = Sessions.GetSession(id);
+                session.GameListener.SendTCPMessage(new AuthenticationFailedMessage()
+                {
+                    Message = "Your account updated,you now have new brawler."
+                });
+                Sessions.Remove(id);
+            }
+            Console.WriteLine("Successful");
+        }
+
         private static void ExecuteUnlockAllForAccount(string[] args)
         {
             if (args.Length != 2)
             {
-                Console.WriteLine("Usage: /unlockall [TAG]");
+                Console.WriteLine("Usage: /unlockall [TAG] [brawler]");
                 return;
             }
 
@@ -297,7 +322,7 @@
                 });
                 Sessions.Remove(id);
             }
-        }        
+        }
 
         private static void ExecuteAddCoins(string[] args)
         {
